@@ -1,4 +1,12 @@
 angular-dev-box
 ===============
 
-Vagrant box based on Ubuntu 14.04 with puppet provisionning to install dependencies
+Provide a vagrant box to install dev dependencies for angular dependencies.
+
+Usage
+-----
+
+    vagrant up
+    vagrant ssh
+    
+Then you have `npm` and `bower` available.
