@@ -36,16 +36,15 @@ file { '/usr/bin/node':
    target => '/usr/bin/nodejs',
 }
 
-exec { "/usr/bin/npm install -g grunt-cli":
+exec { "/usr/bin/npm install -g yo":
   user      => "root",
   logoutput => "on_failure",
-  creates   => "/usr/local/bin/grunt",
+  creates   => "/usr/local/bin/yo",
   require   => Package [ "npm" ]
 }
 
-exec { "/usr/bin/npm install -g bower":
+exec { "/usr/bin/npm install -g generator-angular":
   user      => "root",
   logoutput => "on_failure",
-  creates   => "/usr/local/bin/bower",
-  require   => Package [ "npm" ]
+  require   => Exec [ "/usr/bin/npm install -g yo" ]
 }
