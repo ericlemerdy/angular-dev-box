@@ -17,6 +17,7 @@
 </div>
 
 <div class="row marketing">
+  <select ng-model="selectedAwesomeThing" ng-options="awesomeThing.title for awesomeThing in awesomeThings"></select>
   <span ng-repeat="awesomeThing in awesomeThings">
     <h4>{{awesomeThing.title}}</h4>
     <p>{{awesomeThing.description}}</p>
