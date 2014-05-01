@@ -46,5 +46,6 @@ exec { "/usr/bin/npm install -g yo":
 exec { "/usr/bin/npm install -g generator-angular":
   user      => "root",
   logoutput => "on_failure",
+  creates   => "/usr/local/lib/node_modules/generator-angular",
   require   => Exec [ "/usr/bin/npm install -g yo" ]
 }
