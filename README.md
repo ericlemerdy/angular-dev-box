@@ -9,4 +9,4 @@ Usage
     vagrant up
     vagrant ssh
     
-Then you have `npm` and `bower` available.
+Then you have `npm`, `bower` and `yo` with `generator-angular` available.
